@@ -39,13 +39,14 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ButtonExample() {
     Button(onClick = {/* Do something */}, colors = ButtonDefaults.textButtonColors(
-        backgroundColor = Color. Red
-            ) {
+        backgroundColor = Color.Red)
+                   {
         Text("Button")
-    Button(text = "Kazkas")
     }
 
+
 }
+
 
 @Composable
 fun Greeting(name: String, context: Context? = null) {
