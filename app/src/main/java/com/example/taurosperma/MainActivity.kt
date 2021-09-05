@@ -1,7 +1,9 @@
 package com.example.taurosperma
 
 import android.content.Context
+import android.graphics.fonts.Font
 import android.os.Bundle
+import android.widget.Button
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -35,6 +37,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, context: Context? = null) {
     Surface(color = colorResource(id = R.color.trizna), modifier = Modifier.fillMaxSize()) {
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -44,27 +47,38 @@ fun Greeting(name: String, context: Context? = null) {
         ) {
             Text(
                 color = colorResource(id = R.color.trizna),
-                text = "Hello $name!"
+                text = "Hello $name!",
+
+
             )
 
 
-            val bybiai = " Hello lllll "
+            val bybiai = " Hello World "
             Text(
                 color = colorResource(id = R.color.purple_500),
                 text = bybiai,
                 modifier = Modifier.clickable {
                     context?.let {
                         Toast.makeText(context, bybiai, Toast.LENGTH_SHORT).show()
+
                     }
                 }
             )
 
 
 
-            Text(text = "penis $name!")
+            Text(text = "Sventezeris $name!")
+
+            val ImageButton = android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_icon"
+            android:contentDescription="@string/button_icon_desc"
+            >
+
 
             Text(
-                text = " namas ",
+
+                text = " Justo namas ",
                 modifier = Modifier.clickable { context?.let {
                     Toast.makeText(
                         context,
@@ -72,6 +86,7 @@ fun Greeting(name: String, context: Context? = null) {
 
                         Toast.LENGTH_SHORT
                     ).show() } }
+
 
             )
 
@@ -83,7 +98,7 @@ fun Greeting(name: String, context: Context? = null) {
 fun Makarai(textas: String, context: Context? = null) {
     Column {
         Text(text = textas)
-        Greeting(name = "fasfassaf", context = context)
+        Greeting(name = "Hello", context = context)
     }
 }
 
