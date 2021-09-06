@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
                     Greeting("Android", this)
                 }
             }
-        }
+         }
     }
 }
 
