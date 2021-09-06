@@ -30,22 +30,24 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
                     Greeting("Android", this)
+                    ButtonExample()
                 }
             }
         }
     }
-}
+
 
 @Composable
 fun ButtonExample() {
-    Button(onClick = {/* Do something */}, colors = ButtonDefaults.textButtonColors(
-        backgroundColor = Color.Red)
-                   {
-        Text("Button")
+    Button(
+        onClick = {/* Do something */},
+        colors = ButtonDefaults.textButtonColors(backgroundColor = Color.Red)) {
+        Text(text = "Button")
     }
-
-
 }
+
+
+
 
 
 @Composable
@@ -114,5 +116,6 @@ fun Makarai(textas: String, context: Context? = null) {
 fun DefaultPreview() {
     TauroSpermaTheme {
         Makarai("Masonai")
+        ButtonExample()
     }
 }
